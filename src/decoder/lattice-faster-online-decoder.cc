@@ -1032,6 +1032,8 @@ void LatticeFasterOnlineDecoder::ProcessNonemitting(BaseFloat cutoff) {
           // cost from before, or is new [if so, add into queue].
           if (changed) queue_.push_back(arc.nextstate);
         }
+      } else { 
+         break;
       }
     } // for all arcs
   } // while queue not empty

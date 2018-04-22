@@ -255,6 +255,8 @@ void SimpleDecoder::ProcessNonemitting() {
             }
           }
         }
+      } else { 
+         break;
       }
     }
   }

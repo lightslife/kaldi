@@ -340,6 +340,8 @@ void FasterDecoder::ProcessNonemitting(double cutoff) {
             }
           }
         }
+      } else { 
+         break;
       }
     }
   }

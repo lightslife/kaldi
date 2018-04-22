@@ -607,6 +607,8 @@ void LatticeSimpleDecoder::ProcessNonemitting() {
           if (changed)
             queue.push_back(arc.nextstate);
         }
+      } else { 
+         break;
       }
     }
   }

@@ -127,7 +127,7 @@ if [[ ! -s $dir/HCLGa.fst || $dir/HCLGa.fst -ot $dir/Ha.fst || \
   fi
   fsttablecompose $dir/Ha.fst "$clg" | fstdeterminizestar --use-log=true \
     | fstrmsymbols $dir/disambig_tid.int | fstrmepslocal | \
-     fstminimizeencoded > $dir/HCLGa.fst.$$ || exit 1;
+     fstminimizeencoded  | fstarcsort  --sort_type=ilabel > $dir/HCLGa.fst.$$ || exit 1;
   mv $dir/HCLGa.fst.$$ $dir/HCLGa.fst
   fstisstochastic $dir/HCLGa.fst || echo "HCLGa is not stochastic"
 fi
